@@ -1,0 +1,143 @@
+@import 'mixins';
+
+.footer {
+  .topSection {
+    position: relative;
+    display: flex;
+    padding: var(--spacing-3xl) 0;
+    background-image: url(../backgrounds/waves-footer.svg);
+    background-size: cover;
+
+    .linksContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      gap: var(--spacing-l);
+      font-size: var(--font-size-3xl);
+      font-family: var(--font-light);
+      color: var(--color-primary-dark-2);
+
+      .iconsContainer {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-l);
+
+        svg {
+          box-shadow: var(--shadow-primary);
+        }
+      }
+    }
+
+    .logoContainer {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      .logo {
+        width: 15rem;
+        height: 15rem;
+        justify-self: center;
+        fill: var(--color-primary);
+        filter: drop-shadow(var(--shadow-primary));
+      }
+    }
+
+    @include cutOutTop(calc(50% - 6rem), 19rem);
+  }
+
+  .bottomSection {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-size-s);
+    padding: var(--spacing-s) var(--spacing-10xl);
+    background-color: var(--color-primary-dark-3);
+    color: var(--color-text-gray-darker);
+
+    .contactInfoContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: var(--spacing-2xs);
+
+      .contactInfo {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-4xs);
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+
+    .footnotesContainer {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      gap: var(--spacing-6xs);
+      font-size: var(--font-size-2xs);
+
+      a {
+        @include decoratedTextLink();
+      }
+
+      span {
+        margin: 2px 0;
+      }
+
+      .legalSection {
+        display: flex;
+        justify-content: flex-end;
+        gap: var(--spacing-2xl);
+        padding-top: var(--spacing-4xs);
+
+        span {
+          cursor: pointer;
+          @include decoratedTextLink();
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1240px) {
+  .footer {
+    .bottomSection {
+      padding: var(--spacing-l) var(--spacing-6xl);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    .topSection {
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing-l);
+      padding-top: var(--spacing-11xl);
+      background-image: url(../../assets/backgrounds/waves-header.svg);
+
+      .logoContainer {
+        .logo {
+          height: unset;
+        }
+      }
+    }
+
+    .bottomSection {
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+
+      .contactInfoContainer {
+        align-items: center;
+      }
+
+      .footnotesContainer {
+        text-align: center;
+        .legalSection {
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}

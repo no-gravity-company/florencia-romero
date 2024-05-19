@@ -1,7 +1,7 @@
-const client = require("../_data/client.json");
+const client = require('../_data/client.js');
 
 module.exports = {
-    sitemap: {
-        hostname: client.domain,
-    },
+  sitemap: {
+    hostname: client.domain,
+  },
 };

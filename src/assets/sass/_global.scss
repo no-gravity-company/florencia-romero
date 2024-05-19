@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--color-background-1);
+  color: var(--color-text-gray);
+  font-size: var(--font-size-m);
+  letter-spacing: 3px;
+
+  strong {
+    font-family: var(--font-bold);
+  }
+
+  ul,
+  ol,
+  menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  button {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+    letter-spacing: 3px;
+  }
+
+  fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+}
+
+//
+
+.icon {
+  height: var(--icon-size);
+  width: var(--icon-size);
+}
+
+.gmailIcon {
+  width: 40px;
+}
+
+@media (max-width: 1600px) {
+  :root {
+    --section-body-padding: 0 var(--spacing-18xl);
+  }
+}
+
+@media (max-width: 1500px) {
+  :root {
+    --section-body-padding: 0 var(--spacing-15xl);
+  }
+}
+
+@media (max-width: 1400px) {
+  :root {
+    --section-body-padding: 0 var(--spacing-10xl);
+  }
+}
+
+@media (max-width: 1240px) {
+  :root {
+    --section-body-padding: 0 var(--spacing-3xl);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-body-padding: 0 var(--spacing-s);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --section-body-padding: 0 var(--spacing-4xs);
+  }
+}

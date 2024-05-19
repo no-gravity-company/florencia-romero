@@ -1,0 +1,88 @@
+// MIXINS
+
+@mixin sectionTitle {
+  position: relative;
+  color: var(--color-primary-dark-2);
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-5xl);
+  font-family: var(--font-light);
+  letter-spacing: 10px;
+  margin-top: 10rem;
+  margin-bottom: 4rem;
+}
+
+@mixin sectionBody {
+  position: relative;
+  padding: var(--section-body-padding);
+}
+
+@mixin cutOutTop($left, $lineHeight) {
+  &::before {
+    position: absolute;
+    top: 0;
+    left: $left;
+    width: 12rem;
+    height: 6rem;
+    background-color: var(--color-background-1);
+    content: '';
+    border-bottom-left-radius: 13rem;
+    border-bottom-right-radius: 13rem;
+    box-shadow: var(--shadow-primary-opposite);
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: calc($left + 6rem + 1px);
+    height: $lineHeight;
+    width: 2px;
+    background-color: var(--color-background-1);
+    content: '';
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+@mixin bottomShadowBlocker($left) {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: $left;
+    background-color: var(--color-background-1);
+    width: 192.5px;
+    height: 1rem;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 7px;
+  }
+}
+
+@mixin blobOverlay() {
+  position: relative;
+  .blobOverlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: drop-shadow(var(--shadow-primary));
+  }
+}
+
+@mixin decoratedTextLink() {
+  color: var(--color-text-gray-darker);
+  text-decoration: none;
+  text-underline-offset: 4px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

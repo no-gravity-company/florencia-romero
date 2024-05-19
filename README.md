@@ -22,18 +22,18 @@
 
 ## Table of Contents
 
--   [Overview](#overview)
--   [Prerequisites](#prerequisites)
--   [File Structure](#fileStructure)
-    -   [Root Files and Folders](#rootFilesAndFolders)
-    -   [Source Files and Folders](#sourceFilesAndFolders)
--   [Getting Started](#gettingStarted)
--   [Expanding the Project](#expandingTheProject)
-    -   [Reusing Code](#reusingCode)
-    -   [Adding More Pages](#addingMorePages)
-    -   [Navigation via Front Matter](#navigationViaFrontMatter)
-    -   [Configuring the CMS](#configuringTheCms)
--   [Deployment](#deployment)
+- [Overview](#overview)
+- [Prerequisites](#prerequisites)
+- [File Structure](#fileStructure)
+  - [Root Files and Folders](#rootFilesAndFolders)
+  - [Source Files and Folders](#sourceFilesAndFolders)
+- [Getting Started](#gettingStarted)
+- [Expanding the Project](#expandingTheProject)
+  - [Reusing Code](#reusingCode)
+  - [Adding More Pages](#addingMorePages)
+  - [Navigation via Front Matter](#navigationViaFrontMatter)
+  - [Configuring the CMS](#configuringTheCms)
+- [Deployment](#deployment)
 
 <a name="overview"></a>
 
@@ -70,7 +70,7 @@ Only the vanilla web technologies are _required_ before using this kit, with som
 ├── public/
 ├── src/
 │   ├── _data/
-│   │   └── client.json
+│   │   └── client.js
 │   ├── _includes/
 │   │   ├── components/
 │   │   └── layouts/
@@ -97,25 +97,25 @@ Only the vanilla web technologies are _required_ before using this kit, with som
 
 ### Root Files and Folders
 
--   public/ - Built, ready to deploy files live here. Do not work in here, only your hosting provider needs to make use of this folder.
--   src/ - Raw, source code. The folder you work in.
--   .eleventy.js - Eleventy config file, already set up for you.
--   netlify.toml - Netlify config file for a seamless deployment.
+- public/ - Built, ready to deploy files live here. Do not work in here, only your hosting provider needs to make use of this folder.
+- src/ - Raw, source code. The folder you work in.
+- .eleventy.js - Eleventy config file, already set up for you.
+- netlify.toml - Netlify config file for a seamless deployment.
 
 <a name="sourceFilesAndFolders"></a>
 
 ### Source Files and Folders
 
--   data/ - Global data accessible across the project. Fill out client.json before you begin.
--   includes/ - For reusable code across the project. Split into page-wide layouts and smaller, intra-page components.
--   admin/ - DecapCMS' folder. Includes a config file and index.html entry point.
--   assets/ - Non-HTML files. Images, scripts and styles.
--   config/ - Configuration files for eleventy and plugins. This kit provides code minification and automatic sitemap generation, working out-of-the-box for you.
--   content/ - Pages or data to render pages from, such as the blog.
--   \_redirects - To configure redirects. Read more on <a href="https://docs.netlify.com/routing/redirects/">Netlify</a>
--   index.html - Home page
--   robots.txt - Instructions for site crawlers. Learn more, and generate your own, <a href="https://en.ryte.com/free-tools/robots-txt-generator/">here</a>
--   sitemap.html - A placeholder for the sitemap plugin to generate a sitemap for you on build
+- data/ - Global data accessible across the project. Fill out client.js before you begin.
+- includes/ - For reusable code across the project. Split into page-wide layouts and smaller, intra-page components.
+- admin/ - DecapCMS' folder. Includes a config file and index.html entry point.
+- assets/ - Non-HTML files. Images, scripts and styles.
+- config/ - Configuration files for eleventy and plugins. This kit provides code minification and automatic sitemap generation, working out-of-the-box for you.
+- content/ - Pages or data to render pages from, such as the blog.
+- \_redirects - To configure redirects. Read more on <a href="https://docs.netlify.com/routing/redirects/">Netlify</a>
+- index.html - Home page
+- robots.txt - Instructions for site crawlers. Learn more, and generate your own, <a href="https://en.ryte.com/free-tools/robots-txt-generator/">here</a>
+- sitemap.html - A placeholder for the sitemap plugin to generate a sitemap for you on build
 
 <a name="gettingStarted"></a>
 
@@ -131,7 +131,7 @@ Only the vanilla web technologies are _required_ before using this kit, with som
 Running `npm start` will start a development server, begin SASS preprocessing and start up the CMS (accessible by visiting the `/admin` path). Beforehand, the
 /public directory will be deleted, clearing out any stale files that may have been deleted in the last build.
 
-Next, it is recommended to update `_data/client.json` with some new information about this project. Through the power of templating, the
+Next, it is recommended to update `_data/client.js` with some new information about this project. Through the power of templating, the
 project's `<head>` and contact information will automatically be filled out, providing a first peek into some of the benefits of SSGs. Please ensure the correct file protocol (usually "https://") is used for the client's domain
 
 Finally, you can find all of CodeStitches `:root` variables, as well as .cs-topper, .cs-title and .cs-text, within the `root` stylesheet. Feel free to adjust these, or use our Content Flair micro-stitches, to update site-wide styles quickly.
@@ -317,6 +317,6 @@ Should you wish to extend the "Featured Articles" functionality to group similar
 4. Once deployed, click on _Identity_ in the top navigation, then click _Enable Identity_
 5. Invite yourself, and the client, to the site
 6. While in the Identity tab, click the "Settings and usage" button to open the settings options. Then, do the following:
-    - Find "Registration Preferences", click "Edit Settings" and set registration from _Public_ to _Invite Only_
-    - Find "Enable Providers" and add a provider. We recommend Google, so the client can login with Google in 1 click.
-    - Find "Git Gateway" and enable it
+   - Find "Registration Preferences", click "Edit Settings" and set registration from _Public_ to _Invite Only_
+   - Find "Enable Providers" and add a provider. We recommend Google, so the client can login with Google in 1 click.
+   - Find "Git Gateway" and enable it

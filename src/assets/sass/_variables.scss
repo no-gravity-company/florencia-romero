@@ -1,0 +1,68 @@
+:root {
+  // Sizing
+  --icon-size: 2.25rem;
+  --services-icons-size: 5rem;
+
+  --section-body-padding: 0 var(--spacing-20xl);
+
+  --navbar-height: 3.5rem;
+  --navbar-padding-vertical: 1rem;
+  --navbar-total-height: calc(
+    var(--navbar-height) + var(--navbar-padding-vertical) + var(--navbar-padding-vertical)
+  );
+
+  // Spacing
+  --spacing-7xs: 0.125rem;
+  --spacing-6xs: 0.25rem; // 0.238vw
+  --spacing-5xs: 0.5rem; // 0.476vw
+  --spacing-4xs: 0.75rem; // 0.714vw
+  --spacing-3xs: 1rem; // 0.952vw @ 1680px
+  --spacing-2xs: 1.25rem; // 1.19vw
+  --spacing-xs: 1.5rem; // 1.429vw
+  --spacing-s: 1.75rem; // 1.667vw
+  --spacing-m: 2rem; // 1.905vw @ 1680px
+  --spacing-l: 2.25rem;
+  --spacing-xl: 2.5rem;
+  --spacing-2xl: 2.75rem;
+  --spacing-3xl: 3rem;
+  --spacing-4xl: 3.25rem;
+  --spacing-5xl: 3.5rem;
+  --spacing-6xl: 3.75rem;
+  --spacing-7xl: 4rem;
+  --spacing-8xl: 4.25rem;
+  --spacing-9xl: 4.5rem;
+  --spacing-10xl: 6rem;
+  --spacing-11xl: 7rem;
+  --spacing-15xl: 9rem;
+  --spacing-18xl: 11rem;
+  --spacing-20xl: 12rem;
+
+  // Colors
+
+  --color-primary-dark-3: #6da19c;
+  --color-primary-dark-2: #2c6660;
+  --color-primary-dark-1: #4f9991;
+  --color-primary: #7ec6bf;
+  --color-primary-bright-1: #5fd1c6;
+  --color-primary-bright-2: #99c1bd;
+  --color-primary-bright-3: #c5e5e2;
+  --color-primary-bright-4: #e6f3f2;
+
+  --color-secondary: #4b3e91;
+
+  --color-text-gray-darker: #3b3838;
+  --color-text-gray: #535353;
+
+  --color-background-1: #f8f8f8;
+
+  // Shadows
+  --shadow-primary: rgba(0, 0, 0, 0.08) 1px 2.45px 3px;
+  --shadow-primary-opposite: rgba(0, 0, 0, 0.12) 1px 2.45px 3px inset;
+  --shadow-interior: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+
+  // Borders
+  --border-radius-s: 0.25rem;
+  --border-radius-m: 0.5rem;
+  --border-radius-l: 0.75rem;
+  --border-radius-xl: 1rem;
+}

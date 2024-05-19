@@ -2,6 +2,7 @@
 const pluginEleventyNavigation = require('@11ty/eleventy-navigation');
 const pluginMinifier = require('@sherby/eleventy-plugin-files-minifier');
 const pluginSitemap = require('@quasibit/eleventy-plugin-sitemap');
+const { EleventyRenderPlugin } = require('@11ty/eleventy');
 
 const configCssExtension = require('./src/config/cssExtension');
 const configSitemap = require('./src/config/sitemap');
@@ -9,6 +10,7 @@ const configServer = require('./src/config/server');
 
 const filterPostDate = require('./src/config/postDate');
 const i18n = require('eleventy-plugin-i18n');
+const translations = require('./src/_data/translations');
 
 module.exports = function (eleventyConfig) {
   // EXTENSIONS - Recognising non-default languages as templates
@@ -22,7 +24,7 @@ module.exports = function (eleventyConfig) {
   // https://github.com/11ty/eleventy-navigation
   eleventyConfig.addPlugin(pluginEleventyNavigation);
 
-  // Automatically generate a sitemap, using the domain in _data/client.json
+  // Automatically generate a sitemap, using the domain in _data/client.js
   // https://www.npmjs.com/package/@quasibit/eleventy-plugin-sitemap
   eleventyConfig.addPlugin(pluginSitemap, configSitemap);
 
@@ -44,6 +46,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/assets/fonts');
   eleventyConfig.addPassthroughCopy('./src/assets/images');
   eleventyConfig.addPassthroughCopy('./src/assets/svgs');
+  eleventyConfig.addPassthroughCopy('./src/assets/backgrounds');
+  eleventyConfig.addPassthroughCopy('./src/assets/icons');
   eleventyConfig.addPassthroughCopy('./src/assets/js');
 
   // Other required folders are passed through
@@ -64,12 +68,7 @@ module.exports = function (eleventyConfig) {
 
   // LOC
   eleventyConfig.addPlugin(i18n, {
-    translations: {
-      hello: {
-        en: 'Hello',
-        es: 'Hola',
-      },
-    },
+    translations,
     fallbackLocales: {
       '*': 'es',
     },
@@ -80,6 +79,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection('posts_es', function (collection) {
     return collection.getFilteredByGlob('./src/es/blog/*.md');
   });
+
+  eleventyConfig.addPlugin(EleventyRenderPlugin);
 
   return {
     dir: {
