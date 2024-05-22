@@ -37,6 +37,10 @@ body {
 
 //
 
+.mainPageContainer {
+  padding-top: var(--navbar-total-height);
+}
+
 .icon {
   height: var(--icon-size);
   width: var(--icon-size);

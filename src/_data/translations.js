@@ -1,14 +1,19 @@
 module.exports = {
-  hello: {
-    en: 'Hello',
-    es: 'Hola',
+  footer: {
+    letsTalk: { en: "Let's talk!", es: '¡Hablemos!' },
+    webDesign: { en: 'Website: ', es: 'Página web: ' },
+    logoDesign: { en: 'Logo: ', es: 'Logotipo: ' },
+    photoDesign: { en: 'Photography: ', es: 'Fotografía: ' },
+    legal: { en: 'Legal Notice', es: 'Aviso legal' },
+    privacy: { en: 'Privacy Policy', es: 'Política de privacidad' },
+    cookies: { en: 'Cookie Policy', es: 'Política de cookies' },
   },
   sections: {
-    services: { en: 'Services', es: 'Servicios' },
-    portfolio: { en: 'Portfolio', es: 'Trabajos' },
-    aboutMe: { en: 'About me', es: 'Sobre mí' },
-    contact: { en: 'Contact', es: 'Contacto' },
-    title: {
+    titles: {
+      services: { en: 'Services', es: 'Servicios' },
+      portfolio: { en: 'Portfolio', es: 'Trabajos' },
+      aboutMe: { en: 'About me', es: 'Sobre mí' },
+      contact: { en: 'Contact', es: 'Contacto' },
       traductoraProfesional: {
         en: 'Audiovisual translator\nand accessibility specialist',
         es: 'Traductora audiovisual\ny especialista en accesibilidad',
@@ -110,7 +115,7 @@ module.exports = {
           en: 'audiovisual translation',
           es: 'traducción audiovisual',
         },
-        part4a: { en: '.\n\n', es: '.\n\n' },
+        part4a: { en: '.\n', es: '.\n' },
         part4b: {
           en: 'Furthermore, I wanted to help people with different capabilities fully enjoy audiovisual products, so I started my formation in',
           es: 'Asimismo, quería que las personas con diferentes capacidades pudieran disfrutar de igual manera de los productos audiovisuales, por lo que comencé a formarme en ',
@@ -177,15 +182,6 @@ module.exports = {
         },
       },
     },
-  },
-  footer: {
-    letsTalk: { en: "Let's talk!", es: '¡Hablemos!' },
-    webDesign: { en: 'Website: ', es: 'Página web: ' },
-    logoDesign: { en: 'Logo: ', es: 'Logotipo: ' },
-    photoDesign: { en: 'Photography: ', es: 'Fotografía: ' },
-    legal: { en: 'Legal Notice', es: 'Aviso legal' },
-    privacy: { en: 'Privacy Policy', es: 'Política de privacidad' },
-    cookies: { en: 'Cookie Policy', es: 'Política de cookies' },
   },
   ATRAE_NAME: { en: 'ATRAE', es: 'ATRAE' },
 };

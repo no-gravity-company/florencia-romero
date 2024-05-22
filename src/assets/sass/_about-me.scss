@@ -1,0 +1,102 @@
+@use 'mixins';
+
+.aboutMeSection {
+  .sectionTitle {
+    @include mixins.sectionTitle;
+  }
+
+  .sectionBodyContainer {
+    @include mixins.sectionBody;
+    display: flex;
+    flex-direction: row;
+
+    a {
+      color: var(--color-primary-dark-1);
+      text-underline-offset: 10%;
+    }
+
+    .linkSectionContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 25rem;
+      gap: 24px;
+
+      .portrait {
+        height: 25rem;
+        width: 25rem;
+        border-radius: 10px;
+        border-top-right-radius: 25%;
+        border-bottom-left-radius: 25%;
+        border-top-left-radius: 25%;
+        box-shadow: var(--shadow-primary);
+      }
+
+      .linkRow {
+        padding: var(--spacing-3xs) 0;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+      }
+
+      .atraeLogo {
+        height: 4rem;
+        width: 9rem;
+      }
+
+      .awardsText {
+        a {
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .textSectionContainer {
+      padding: 0 0 0 var(--spacing-20xl);
+      white-space: pre-line;
+      text-align: justify;
+
+      b {
+        font-family: var(--font-bold);
+      }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .aboutMeSection {
+    .sectionBodyContainer {
+      flex-direction: column;
+      align-items: center;
+
+      .linkSectionContainer {
+        margin-bottom: 88px;
+      }
+
+      .textSectionContainer {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutMeSection {
+    .sectionBodyContainer {
+      .linkSectionContainer {
+        width: 100% !important;
+        .portrait {
+          width: 100% !important;
+          height: unset !important;
+        }
+      }
+
+      .textSectionContainer {
+        text-align: left;
+      }
+    }
+  }
+}

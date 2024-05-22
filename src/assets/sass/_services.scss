@@ -1,0 +1,119 @@
+@use 'mixins';
+
+.servicesSection {
+  .sectionTitle {
+    position: relative;
+    @include mixins.sectionTitle;
+    margin-top: 6rem;
+  }
+
+  .sectionBodyContainer {
+    @include mixins.sectionBody;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: var(--spacing-9xl);
+  }
+
+  .service {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-4xl) var(--spacing-6xl);
+    box-shadow: var(--shadow-primary);
+    border-radius: 10px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    background-image: url(../backgrounds/gradient-services.svg);
+    background-size: cover;
+
+    img {
+      height: var(--services-icons-size);
+      width: var(--services-icons-size);
+      align-self: center;
+    }
+
+    .title {
+      height: 72px;
+      font-family: var(--font-bold);
+      color: var(--color-primary-dark-2);
+      text-align: center;
+    }
+
+    .bodyText {
+      padding-left: 10%;
+    }
+  }
+}
+
+@media (max-width: 1850px) {
+  .servicesSection {
+    .sectionBodyContainer {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+
+@media (max-width: 1170px) {
+  .servicesSection {
+    .sectionBodyContainer {
+      padding-left: 220px;
+      padding-right: 220px;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .servicesSection {
+    .sectionBodyContainer {
+      padding-left: 180px;
+      padding-right: 180px;
+    }
+  }
+}
+
+@media (max-width: 1020px) {
+  .servicesSection {
+    .sectionBodyContainer {
+      padding-left: 120px;
+      padding-right: 120px;
+    }
+  }
+}
+
+@media (max-width: 864px) {
+  .servicesSection {
+    .sectionBodyContainer {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .servicesSection {
+    .sectionBodyContainer {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .servicesSection {
+    .sectionBodyContainer {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .servicesSection {
+    .sectionBodyContainer {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
