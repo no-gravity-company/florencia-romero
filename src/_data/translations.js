@@ -10,14 +10,14 @@ module.exports = {
   },
   sections: {
     titles: {
+      main: {
+        en: 'Audiovisual translator\nand accessibility specialist',
+        es: 'Traductora audiovisual\ny especialista en accesibilidad',
+      },
       services: { en: 'Services', es: 'Servicios' },
       portfolio: { en: 'Portfolio', es: 'Trabajos' },
       aboutMe: { en: 'About me', es: 'Sobre mí' },
       contact: { en: 'Contact', es: 'Contacto' },
-      traductoraProfesional: {
-        en: 'Audiovisual translator\nand accessibility specialist',
-        es: 'Traductora audiovisual\ny especialista en accesibilidad',
-      },
     },
     wordSoup: {
       blinkWords1: { en: 'quality', es: 'calidad' },
@@ -184,4 +184,14 @@ module.exports = {
     },
   },
   ATRAE_NAME: { en: 'ATRAE', es: 'ATRAE' },
+  languages: {
+    english: {
+      en: 'English',
+      es: 'Inglés',
+    },
+    spanish: {
+      en: 'Spanish',
+      es: 'Español',
+    },
+  },
 };

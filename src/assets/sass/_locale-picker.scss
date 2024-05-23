@@ -1,0 +1,25 @@
+.localePicker {
+  display: flex;
+  gap: var(--spacing-4xs);
+
+  a {
+    text-align: center;
+    padding: calc(var(--spacing-6xs) + 3px);
+    padding-right: var(--spacing-6xs);
+    color: inherit;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+  }
+
+  .selectedLocale {
+    border: 2px solid var(--color-primary-dark-1);
+  }
+}
+
+@media (max-width: 864px) {
+  .localePicker {
+    position: relative;
+    padding-top: var(--spacing-m);
+  }
+}

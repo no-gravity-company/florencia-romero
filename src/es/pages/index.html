@@ -9,8 +9,6 @@ eleventyNavigation:
 ---
 
 {% extends "layouts/base.html" %} {% block head %}
-<link rel="stylesheet" href="/assets/css/local.css" />
-<link rel="stylesheet" href="/assets/css/critical.css" />
 
 <!-- Script for Netlify Identity -->
 <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -25,5 +23,6 @@ eleventyNavigation:
     });
   }
 </script>
-{% endblock %} {% block body %} {% include "sections/services.html" %} {% include
-"sections/about-me.html" %} {% endblock %}
+{% endblock %} {% block body %} {% include "sections/title.html" %} {% include
+"sections/services.html" %} {% include "sections/about-me.html" %} {% include
+"sections/contact.html" %} {% endblock %}

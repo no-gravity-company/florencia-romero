@@ -1,4 +1,9 @@
-<svg width="15px" height="15px" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg id="open-dropdown"
+      class="dropdownIcon visible"
+      role="button"
+      aria-label="Open navigation and language menu"
+      aria-expanded="false"
+      aria-haspopup="true" width="15px" height="15px" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path
     fill-rule="evenodd"
     clip-rule="evenodd"

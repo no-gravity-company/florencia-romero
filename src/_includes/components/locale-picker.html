@@ -1,0 +1,12 @@
+<fieldset class="localePicker" role="group" aria-label="{{aria.localePicker}}">
+  {% for loc in locales %}
+  <a
+    href="/{{ loc.code }}"
+    class="item {% if locale === loc.code %}selectedLocale{% endif %}"
+    aria-label="Set page language to {{ ('languages.' + loc.name) | i18n }}"
+    role="switch"
+  >
+    {{loc.code | uppercase}}
+  </a>
+  {% endfor %}
+</fieldset>

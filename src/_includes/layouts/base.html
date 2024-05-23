@@ -51,8 +51,7 @@
 
     <!-- Sitewide Stylesheets and Scripts -->
     <link rel="stylesheet" href="/assets/css/index.css" />
-    <script defer src="/assets/js/nav.js"></script>
-    <script defer src="/assets/js/dark.js"></script>
+    <script defer src="/assets/js/index.js"></script>
 
     {% block head %}{% endblock %}
 
@@ -69,9 +68,6 @@
     </title>
   </head>
   <body>
-    <!--Screen reader skip main nav-->
-    <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
-
     {% include "components/header.html" %}
     <main class="mainPageContainer">{% block body %}{% endblock %}</main>
     {% include "components/footer.html" %}

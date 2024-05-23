@@ -1,4 +1,10 @@
-<svg width="72px" height="72px" viewBox="0 0 72 72" id="emoji" xmlns="http://www.w3.org/2000/svg">
+<svg  id="close-dropdown"
+      class="dropdownIcon"
+      role="button"
+      aria-label="Close navigation and language menu"
+      aria-expanded="true"
+      aria-haspopup="true"
+ width="72px" height="72px" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
   <g id="color"/>
   <g id="hair"/>
   <g id="skin"/>

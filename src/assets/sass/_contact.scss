@@ -1,0 +1,243 @@
+@use 'mixins';
+
+.contactSection {
+  @include mixins.section;
+  padding-bottom: unset;
+
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+  }
+  .sectionTitle {
+    @include mixins.sectionTitle;
+  }
+
+  .sectionBodyContainer {
+    @include mixins.sectionBody;
+    padding-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+
+    .sectionSubtitle {
+      text-align: center;
+      font-size: var(--font-size-l);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing-5xs);
+      margin: 0 0 var(--spacing-10xl);
+
+      strong {
+        color: var(--color-primary-dark-2);
+      }
+    }
+
+    .sectionBodyColumnsContainer {
+      display: flex;
+      width: 100%;
+      gap: 10%;
+
+      .contactInfoContainer {
+        @include mixins.blobOverlay;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: 300px;
+        gap: var(--spacing-s);
+
+        .contactInfo {
+          display: flex;
+          align-items: center;
+          gap: var(--spacing-4xs);
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+
+      .formContainer {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        .form {
+          display: flex;
+          flex-direction: column;
+          width: 480px;
+
+          input:not([type='checkbox']),
+          textarea {
+            box-sizing: border-box;
+            font-family: var(--font-light);
+            margin: var(--spacing-7xs) 0 var(--spacing-5xs);
+            background-color: var(--color-primary-bright-3);
+            border: none;
+            border-radius: var(--border-radius-s);
+            box-shadow: var(--shadow-interior);
+            padding: var(--spacing-5xs);
+            letter-spacing: 2.5px;
+
+            &:focus {
+              outline-color: var(--color-primary-dark-1);
+            }
+          }
+
+          textarea {
+            min-width: 100%;
+            max-width: 100%;
+            min-height: 8rem;
+            max-height: 20rem;
+          }
+
+          .checkBoxContainer {
+            font-size: var(--font-size-xs);
+
+            input {
+              margin: 0 var(--spacing-4xs) 0 0;
+            }
+
+            span {
+              color: var(--color-primary-dark-1);
+              text-decoration: none;
+              font-family: var(--font-bold);
+            }
+
+            span,
+            input {
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+
+          .sendButton {
+            position: relative;
+            box-sizing: border-box;
+            width: 30%;
+            min-width: 8rem;
+            box-shadow: var(--shadow-primary);
+            border: none;
+            color: var(--color-primary-dark-1);
+            font-size: var(--font-size-m);
+            transition: 0.3s ease;
+            outline: none;
+            border-radius: var(--border-radius-m);
+            padding: 2% 1%;
+            background-color: transparent;
+            border: 3px solid var(--color-primary-dark-1);
+            margin-top: var(--spacing-2xs);
+
+            &:hover:not([disabled]) {
+              cursor: pointer;
+              transform: scale(1.04);
+            }
+
+            &:active:not([disabled]) {
+              transform: translateY(3px) scale(1.07);
+            }
+          }
+
+          .sendButton[disabled] {
+            opacity: 0.5;
+          }
+
+          .smallTextContainer {
+            margin-top: var(--spacing-3xs);
+            font-size: var(--font-size-2xs);
+            line-height: 1.5;
+            text-align: justify;
+          }
+
+          input:-webkit-autofill,
+          input:-webkit-autofill:hover,
+          input:-webkit-autofill:focus,
+          input:-webkit-autofill:active {
+            box-shadow: var(--shadow-interior), 0 0 0 30px var(--color-primary-bright-2) inset;
+            -webkit-box-shadow: var(--shadow-interior),
+              0 0 0 30px var(--color-primary-bright-2) inset;
+          }
+        }
+      }
+    }
+    @include mixins.bottomShadowBlocker(calc(50% - 96.7px));
+  }
+}
+
+@media (max-width: 1240px) {
+  .contactSection {
+    .sectionBodyContainer {
+      .sectionSubtitle {
+        margin-bottom: var(--spacing-5xl);
+      }
+
+      .sectionBodyColumnsContainer {
+        .formContainer {
+          .form {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .contactSection {
+    .sectionBodyContainer {
+      padding-bottom: 6rem;
+      .sectionSubtitle {
+        margin-bottom: var(--spacing-xl);
+      }
+      .sectionBodyColumnsContainer {
+        flex-direction: column;
+        align-items: center;
+        .contactInfoContainer {
+          width: 400px;
+          margin: 0 0 var(--spacing-l);
+        }
+        .formContainer {
+          width: 100%;
+          .form {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contactSection {
+    .sectionBodyContainer {
+      .sectionBodyColumnsContainer {
+        .formContainer {
+          .form {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contactSection {
+    .sectionBodyContainer {
+      .sectionBodyColumnsContainer {
+        .contactInfoContainer {
+          width: 100%;
+        }
+        .formContainer {
+          .form {
+            width: 95%;
+          }
+        }
+      }
+    }
+  }
+}

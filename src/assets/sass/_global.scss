@@ -35,11 +35,11 @@ body {
   }
 }
 
-//
-
-.mainPageContainer {
-  padding-top: var(--navbar-total-height);
+html {
+  scroll-behavior: smooth;
 }
+
+//
 
 .icon {
   height: var(--icon-size);

@@ -1,5 +1,10 @@
 // MIXINS
 
+@mixin section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 @mixin sectionTitle {
   position: relative;
   color: var(--color-primary-dark-2);
@@ -11,7 +16,7 @@
   font-size: var(--font-size-5xl);
   font-family: var(--font-light);
   letter-spacing: 10px;
-  margin-top: 10rem;
+  margin-top: unset;
   margin-bottom: 4rem;
 }
 

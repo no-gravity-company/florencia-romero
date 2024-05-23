@@ -1,10 +1,11 @@
 @use 'mixins';
 
 .servicesSection {
+  @include mixins.section;
+
   .sectionTitle {
     position: relative;
     @include mixins.sectionTitle;
-    margin-top: 6rem;
   }
 
   .sectionBodyContainer {

@@ -1,6 +1,8 @@
 @use 'mixins';
 
 .aboutMeSection {
+  @include mixins.section;
+
   .sectionTitle {
     @include mixins.sectionTitle;
   }

@@ -59,6 +59,12 @@ module.exports = function (eleventyConfig) {
   // FILTERS - Modify data in template files at build time
   // Converts dates from JSDate format (Fri Dec 02 18:00:00 GMT-0600) to a locale format. More info in docs - https://moment.github.io/luxon/api-docs/index.html#datetime
   eleventyConfig.addFilter('postDate', filterPostDate);
+  eleventyConfig.addFilter('uppercase', function (value) {
+    if (typeof value === 'string') {
+      return value.toUpperCase();
+    }
+    return value;
+  });
   // END FILTERS
 
   // SHORTCODES - Output data using JS at build-time

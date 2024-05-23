@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--?xml version="1.0" standalone="no"?-->
+
+<svg
+   viewBox="4.5 1.5 65 49"
+   version="1.1"
+   width="65"
+   height="49"
+   class="blobOverlay"
+>
+  <defs
+     id="defs47">
+    <linearGradient
+       id="sw-gradient"
+       x1="-29.9151"
+       x2="29.393667"
+       y1="27.0952"
+       y2="-32.21357"
+       gradientTransform="matrix(1.1272289,0,0,0.70798415,77.410261,48.602095)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         id="stop1"
+         stop-color="#c5e5e2"
+         offset="0%" />
+      <stop
+         id="stop2"
+         stop-color="#e6f3f2"
+         offset="100%" />
+    </linearGradient>
+  </defs>
+  <path
+     fill="url(#sw-gradient)"
+     d="M 68.191042,19.453282 C 72.019935,29.55353 66.12137,41.984606 56.39391,47.250548 46.666449,52.516489 33.006612,50.617298 21.933864,44.315433 10.861117,37.927242 2.3754603,27.136377 5.3764853,17.985724 8.3775102,8.9213989 22.865218,1.4972843 36.835505,1.6699381 50.805793,1.7562651 64.362148,9.4393605 68.191042,19.453282 Z"
+     width="100%"
+     height="100%"
+     stroke-width="0"
+     style="fill:url(#sw-gradient);stroke:url(#sw-gradient)"
+     stroke="url(#sw-gradient)"
+     id="path49" />
+</svg>
+
