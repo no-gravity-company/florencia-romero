@@ -62,6 +62,7 @@ const initializeDropdown = () => {
 const initializeIntersectionObserver = () => {
   document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('section');
+    const goTopButton = document.getElementById('go-top-button');
 
     const observerCallback = (entries, observer) => {
       entries.forEach((entry) => {
@@ -71,6 +72,13 @@ const initializeIntersectionObserver = () => {
         } else {
           entry.target.classList.remove('currentSection');
           document.getElementById(`${entry.target.id}-url`)?.classList.remove('currentSection');
+        }
+        if (entry.target.id === 'title') {
+          if (entry.isIntersecting) {
+            goTopButton.classList.remove('visible');
+          } else {
+            goTopButton.classList.add('visible');
+          }
         }
       });
     };

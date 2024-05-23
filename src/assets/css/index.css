@@ -943,5 +943,39 @@ html {
     justify-content: space-between;
   }
 }
+.goTopButton {
+  position: fixed;
+  bottom: 12px;
+  right: 19px;
+  pointer-events: none;
+  opacity: 0;
+}
+.goTopButton svg {
+  width: 28.5px;
+  height: 28.5px;
+  z-index: 100;
+  transition: all 0.3s;
+  background-color: transparent;
+  filter: drop-shadow(var(--shadow-primary));
+}
+.goTopButton.visible {
+  opacity: 0.3;
+  pointer-events: all;
+}
+.goTopButton:hover {
+  cursor: pointer;
+}
+.goTopButton:hover svg {
+  transform: scale(1.07);
+}
+.goTopButton:active svg {
+  transform: translateY(3px) scale(1.07);
+}
+
+@media (max-width: 480px) {
+  .goTopButton {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */

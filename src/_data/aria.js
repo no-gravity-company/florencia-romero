@@ -7,4 +7,5 @@ module.exports = {
     dropdown: 'Navbar dropdown menu',
     localePicker: 'Language options',
   },
+  scrollTop: 'Scroll to top',
 };
