@@ -49,10 +49,29 @@
     <link rel="preload" as="image" href="{{ preloadImg }}" />
     {% endif %}
 
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
+    {#
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    #}
     <!-- Sitewide Stylesheets and Scripts -->
     <link rel="stylesheet" href="/assets/css/index.css" />
+    <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-config-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-storage-compat.js"></script>
     <script defer src="/assets/js/index.js"></script>
-
     {% block head %}{% endblock %}
 
     <!--For home page, use service keywords for the title, including location for SEO.
@@ -71,5 +90,8 @@
     {% include "components/header.html" %}
     <main class="mainPageContainer">{% block body %}{% endblock %}</main>
     {% include "components/footer.html" %} {% include "components/go-top-button.html" %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script defer src="/assets/js/carousel.js"></script>
   </body>
 </html>

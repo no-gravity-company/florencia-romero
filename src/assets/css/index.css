@@ -479,6 +479,90 @@ html {
     padding-right: 15px;
   }
 }
+.portfolioSection {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.portfolioSection .sectionTitle {
+  position: relative;
+  color: var(--color-primary-dark-2);
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-5xl);
+  font-family: var(--font-light);
+  letter-spacing: 10px;
+  margin-top: unset;
+  margin-bottom: 4rem;
+}
+.portfolioSection .sectionBodyContainer {
+  position: relative;
+  padding: var(--section-body-padding);
+}
+.portfolioSection .sectionBodyContainer .portfolioLinkContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xl);
+  padding-bottom: var(--spacing-9xl);
+}
+.portfolioSection .sectionBodyContainer .portfolioLinkContainer .portfolioText a {
+  color: var(--color-primary-dark-1);
+  text-underline-offset: 10%;
+}
+.portfolioSection .sectionBodyContainer .carrouselContainer .carrouselItemContainer {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1240px) {
+  .portfolioSection .sectionBodyContainer .portfolioLinkContainer {
+    padding-bottom: var(--spacing-m);
+  }
+  .portfolioSection .sectionBodyContainer .carrouselContainer {
+    padding: 5%;
+  }
+}
+@media (max-width: 768px) {
+  .portfolioSection .carrouselContainer {
+    padding: 0 10%;
+  }
+}
+.carousel img {
+  height: 327px;
+  width: 220px;
+}
+
+.slick-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-slider .slick-arrow {
+  width: 50px;
+  height: 50px;
+}
+.slick-slider .slick-arrow::before {
+  color: var(--color-primary);
+  font-size: 50px;
+}
+.slick-slider .slick-arrow.slick-prev {
+  left: -55px;
+}
+.slick-slider .slick-arrow.slick-next {
+  right: -55px;
+}
+
+@media (max-width: 768px) {
+  .slick-arrow {
+    display: none !important;
+  }
+}
 .aboutMeSection {
   padding-top: 5rem;
   padding-bottom: 5rem;

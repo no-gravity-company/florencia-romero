@@ -1,0 +1,57 @@
+@use 'mixins';
+
+.portfolioSection {
+  @include mixins.section;
+
+  .sectionTitle {
+    @include mixins.sectionTitle;
+  }
+
+  .sectionBodyContainer {
+    @include mixins.sectionBody;
+
+    .portfolioLinkContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-xl);
+      padding-bottom: var(--spacing-9xl);
+
+      .portfolioText {
+        a {
+          color: var(--color-primary-dark-1);
+          text-underline-offset: 10%;
+        }
+      }
+    }
+
+    .carrouselContainer {
+      .carrouselItemContainer {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 1240px) {
+  .portfolioSection {
+    .sectionBodyContainer {
+      .portfolioLinkContainer {
+        padding-bottom: var(--spacing-m);
+      }
+      .carrouselContainer {
+        padding: 5%;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .portfolioSection {
+    .carrouselContainer {
+      padding: 0 10%;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.carousel img {
+  height: 327px;
+  width: 220px;
+}
+
+.slick-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-slider {
+  .slick-arrow {
+    width: 50px;
+    height: 50px;
+    &::before {
+      color: var(--color-primary);
+      font-size: 50px;
+    }
+
+    &.slick-prev {
+      left: -55px;
+    }
+    &.slick-next {
+      right: -55px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .slick-arrow {
+    display: none !important;
+  }
+}
