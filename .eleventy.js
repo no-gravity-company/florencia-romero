@@ -31,13 +31,6 @@ module.exports = function (eleventyConfig) {
   // https://www.npmjs.com/package/@quasibit/eleventy-plugin-sitemap
   eleventyConfig.addPlugin(pluginSitemap, configSitemap);
 
-  // When in production ("npm run build" is ran), minify all HTML, CSS, JSON, XML, XSL and webmanifest files.
-  // https://github.com/benjaminrancourt/eleventy-plugin-files-minifier
-  if (configServer.isProduction) {
-    eleventyConfig.addPlugin(pluginMinifier);
-  }
-  // END PLUGINS
-
   // SERVER - Set how the eleventy dev server is run, using the options from https://www.11ty.dev/docs/dev-server/
   eleventyConfig.setServerOptions(configServer);
   // END SERVER
