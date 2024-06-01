@@ -191,7 +191,7 @@ html {
 }
 .header .logo {
   width: 56px;
-  fill: var(--color-primary);
+  fill: var(--color-primary-dark-1);
   cursor: pointer;
 }
 .header .sectionsContainer,
