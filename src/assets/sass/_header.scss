@@ -1,5 +1,10 @@
 @use 'mixins';
 
+:root {
+  --header-bg-opacity: 0;
+  --header-text-color: hsl(0, 0, 100%);
+}
+
 .header {
   position: relative;
   display: flex;
@@ -7,13 +12,24 @@
   align-items: center;
   height: var(--navbar-height);
   padding: var(--navbar-padding-vertical) 3rem;
-  background-color: white;
-  box-shadow: var(--shadow-primary);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
+
+  &::before {
+    opacity: var(--header-bg-opacity);
+    content: '';
+    position: absolute;
+    background-color: white;
+    box-shadow: var(--shadow-primary);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+  }
 
   a {
     text-decoration: none;
@@ -21,7 +37,7 @@
 
   .logo {
     width: 56px;
-    fill: var(--color-primary);
+    fill: var(--header-text-color);
     cursor: pointer;
   }
 
@@ -31,12 +47,13 @@
     gap: var(--spacing-2xs);
 
     a {
-      color: var(--color-primary-dark-2);
+      opacity: var(--header-bg-opacity);
+      color: var(--header-text-color);
       cursor: pointer;
 
       &::after {
         display: block;
-        border-bottom: solid 1px var(--color-primary-dark-2);
+        border-bottom: solid 1px var(--header-text-color);
         content: '';
         transform: scaleX(0);
         transition: transform 250ms ease-in-out;
@@ -53,8 +70,8 @@
     width: 33px;
     height: 33px;
 
-    color: var(--color-primary-dark-2);
-    stroke: var(--color-primary-dark-2);
+    color: var(--header-text-color);
+    stroke: var(--header-text-color);
     stroke-width: 0.3px;
   }
 

@@ -91,6 +91,49 @@ const initializeIntersectionObserver = () => {
   });
 };
 
+function interpolateColor(startColor, endColor, percentage) {
+  let hue = startColor.hue + (endColor.hue - startColor.hue) * percentage;
+  let saturation =
+    startColor.saturation + (endColor.saturation - startColor.saturation) * percentage;
+  let lightness = startColor.lightness + (endColor.lightness - startColor.lightness) * percentage;
+
+  return { hue, saturation, lightness };
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const header = document.getElementById('header');
+
+  const startColor = { hue: 0, saturation: 0, lightness: 100 }; // Example start color (red)
+  const endColor = { hue: 174, saturation: 40, lightness: 29 }; // Example end color (green)
+
+  function updateHeaderStyleOnScroll(element) {
+    let scrollPosition = window.scrollY;
+    let windowHeight = window.innerHeight;
+
+    // Calculate animation progress based on scroll position
+    let animationProgress = 1 - Math.pow(windowHeight / (scrollPosition * 15), 2);
+
+    animationProgress = Math.max(0, animationProgress); // Ensure opacity is not less than 0
+    animationProgress = Math.min(1, animationProgress); // Ensure opacity is not more than 1
+
+    let interpolatedColor = interpolateColor(startColor, endColor, animationProgress);
+
+    document.documentElement.style.setProperty('--header-bg-opacity', animationProgress);
+    document.documentElement.style.setProperty(
+      '--header-text-color',
+      `hsl(${interpolatedColor.hue}, ${interpolatedColor.saturation}%, ${interpolatedColor.lightness}%)`
+    );
+  }
+
+  function handleScroll() {
+    updateHeaderStyleOnScroll(header);
+  }
+
+  handleScroll();
+
+  window.addEventListener('scroll', handleScroll);
+});
+
 initializeDropdown();
 initializeForm();
 initializeIntersectionObserver();

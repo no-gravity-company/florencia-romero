@@ -1,8 +1,6 @@
 @import 'mixins';
 
 .titleSection {
-  padding-top: var(--navbar-total-height);
-
   .titleContainer {
     position: relative;
     display: flex;
@@ -11,7 +9,8 @@
     justify-content: center;
     min-height: 32rem;
     gap: var(--spacing-xs);
-    padding: var(--spacing-xs) var(--spacing-9xl) var(--spacing-10xl);
+    padding: calc(var(--navbar-total-height) + var(--spacing-xs)) var(--spacing-9xl)
+      var(--spacing-10xl);
     box-shadow: var(--shadow-primary);
     font-family: var(--font-light);
     color: var(--color-secondary);
