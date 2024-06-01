@@ -5,6 +5,7 @@
     class="item {% if locale === loc.code %}selectedLocale{% endif %}"
     aria-label="Set page language to {{ ('languages.' + loc.name) | i18n }}"
     role="switch"
+    aria-checked="{{locale === loc.code}}"
   >
     {{loc.code | uppercase}}
   </a>

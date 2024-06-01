@@ -31,12 +31,12 @@
     gap: var(--spacing-2xs);
 
     a {
-      color: var(--color-primary-dark-1);
+      color: var(--color-primary-dark-2);
       cursor: pointer;
 
       &::after {
         display: block;
-        border-bottom: solid 1px var(--color-primary-dark-1);
+        border-bottom: solid 1px var(--color-primary-dark-2);
         content: '';
         transform: scaleX(0);
         transition: transform 250ms ease-in-out;
@@ -53,8 +53,8 @@
     width: 33px;
     height: 33px;
 
-    color: var(--color-primary-dark-1);
-    stroke: var(--color-primary-dark-1);
+    color: var(--color-primary-dark-2);
+    stroke: var(--color-primary-dark-2);
     stroke-width: 0.3px;
   }
 

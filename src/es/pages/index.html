@@ -1,28 +1,8 @@
 ---
-title: 'Pixel Perfect Websites'
-description: 'Meta description for the page'
-preloadImg: '/assets/images/landing.jpg'
 permalink: '/{{ locale }}'
 eleventyNavigation:
   key: Home
   order: 100
 ---
 
-{% extends "layouts/base.html" %} {% block head %}
-
-<!-- Script for Netlify Identity -->
-<script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script defer>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on('init', (user) => {
-      if (!user) {
-        window.netlifyIdentity.on('login', () => {
-          document.location.href = '/admin/';
-        });
-      }
-    });
-  }
-</script>
-{% endblock %} {% block body %} {% include "sections/title.html" %} {% include
-"sections/services.html" %} {% include "sections/portfolio.html" %} {% include
-"sections/about-me.html" %} {% include "sections/contact.html" %} {% endblock %}
+{% extends "layouts/base.html" %} {% block head %} {% endblock %}

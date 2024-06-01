@@ -1,4 +1,21 @@
 module.exports = {
+  meta: {
+    title: {
+      en: 'Audio description, accessibility and translation',
+      es: 'Audiodescripción, accesibilidad y traducción',
+    },
+    description: {
+      en: 'Expert in audio description, accessibility and audiovisual translation from English to Spanish',
+      es: 'Experta en audiodescripción, accesibilidad y traducción audiovisual de inglés a español',
+    },
+    keywords: {
+      en: 'Audio Description, Audiodescriber, Audiodescriptor, Audio describer, Audio descriptor, Video Description, Acessibility specialist, Audio Description Expert, Accessibility, Accessibility Expert, Translation, Spanish Audio Description, English to Spanish translation, English to Spanish audiovisual translation',
+      es: 'Audiodescripción, Audio descripción, Audiodescriptor, Audiodescriptora, Especialista en accesibilidad, Experta en Audiodescripción, Accesibilidad, Experta en Accesibilidad, Traducción, Audiodescripción en español, Traducción de inglés a español, Traducción audiovisual de inglés a español',
+    },
+    address: {
+      country: { en: 'Spain', es: 'España' },
+    },
+  },
   footer: {
     letsTalk: { en: "Let's talk!", es: '¡Hablemos!' },
     webDesign: { en: 'Website: ', es: 'Página web: ' },
@@ -7,6 +24,7 @@ module.exports = {
     legal: { en: 'Legal Notice', es: 'Aviso legal' },
     privacy: { en: 'Privacy Policy', es: 'Política de privacidad' },
     cookies: { en: 'Cookie Policy', es: 'Política de cookies' },
+    telephone: { en: 'Telephone', es: 'Teléfono' },
   },
   sections: {
     titles: {
@@ -90,10 +108,14 @@ module.exports = {
       },
     },
     portfolio: {
-      here: { en: 'Here', es: 'Aquí' },
-      text: {
-        en: 'you will find some of the movies, TV shows and video games that I have worked on.',
-        es: 'encontrarás algunas de las obras audiovisuales y videojuegos en los que he trabajado.',
+      text1: {
+        en: 'Visit my ',
+        es: 'Visita mi ',
+      },
+      textLink: { en: 'ATRAE registry', es: 'listado de obras registradas de ATRAE' },
+      text2: {
+        en: ' to find some of the movies, TV series, documentaries, video games, and other audiovisual projects that I have worked on.',
+        es: ' para ver algunas de las películas, series, documentales, videojuegos y otras obras audiovisuales en las que he trabajado.',
       },
     },
     aboutMe: {
@@ -122,8 +144,8 @@ module.exports = {
         },
         part4c: { en: 'accessibility', es: 'accesibilidad' },
         part4d: {
-          en: ', and now I work with it in a professional capacity. I am also part of the Accessibility Committee and the Awards Committee of',
-          es: ', y ahora me dedico a ello de forma profesional. También formo parte de la Comisión de Accesibilidad y de la Comisión de Premios de  ',
+          en: ', and now I work with it in a professional capacity. I am also part of the Accessibility Committee and the Awards Committee of ',
+          es: ', y ahora me dedico a ello de forma profesional. También formo parte de la Comisión de Accesibilidad y de la Comisión de Premios de ',
         },
         part4e: {
           en: '(Association of Translation and Audiovisual Adaptation in Spain).',

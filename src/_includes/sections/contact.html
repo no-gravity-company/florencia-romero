@@ -9,29 +9,29 @@
       <div class="contactInfoContainer">
         {% renderFile './src/assets/images/blob-1.svg', null, 'html'%}
         <a href="{{urls.gmail}}" target="_blank" rel="noopener noreferrer" class="contactInfo">
-          <img src="/assets/icons/mail.png" class="icon" />
+          <img src="/assets/icons/mail.png" class="icon" alt="gmail" />
           <span>{{client.email}}</span>
         </a>
         <a class="contactInfo" href="{{urls.phone}}">
-          <img src="/assets/icons/phone.png" class="icon" />
+          <img src="/assets/icons/phone.png" class="icon" alt="{{'footer.telephone' | i18n}}" />
           <span>{{client.phoneNumber}}</span>
         </a>
       </div>
       <div class="formContainer">
         <form class="form" action="{{urls.formSubmit}}" method="post" target="_blank">
-          <label htmlFor="name">{{'sections.contact.form.name' | i18n}}</label>
-          <input name="Name" id="name" type="text" required />
-          <label htmlFor="email">{{'sections.contact.form.email' | i18n}}</label>
-          <input name="Email" id="email" type="email" required />
-          <label htmlFor="message">{{'sections.contact.form.message' | i18n}}</label>
-          <textarea name="Message" id="message" required></textarea>
-          <div class="checkBoxContainer">
+          <label for="name">{{'sections.contact.form.name' | i18n}}</label>
+          <input name="name" id="name" type="text" required />
+          <label for="email">{{'sections.contact.form.email' | i18n}}</label>
+          <input name="email" id="email" type="email" required />
+          <label for="message">{{'sections.contact.form.message' | i18n}}</label>
+          <textarea name="message" id="message" required></textarea>
+          <label class="checkBoxContainer">
             <input id="formAgree" type="checkbox" required />
             {{'sections.contact.form.privacyPolicy.part1' | i18n}}
             <span onClick="{handlePrivacyPolicyLinkClick}"
               >{{'sections.contact.form.privacyPolicy.part2' | i18n}}</span
             >
-          </div>
+          </label>
           <button id="formSubmit" type="submit" class="sendButton">
             {{'sections.contact.form.send' | i18n}}
           </button>

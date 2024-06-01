@@ -3,7 +3,7 @@
   <div class="sectionBodyContainer">
     {% for service in services %}
     <div class="service">
-      <img src="/assets/icons/{{ service }}.png" class="icon" />
+      <img src="/assets/icons/{{ service }}.png" class="icon" alt="{{service}}" />
       <span class="title">{{ ('sections.services.' + service + '.title') | i18n }}</span>
       <span class="bodyText">{{ ('sections.services.' + service + '.body') | i18n }}</span>
     </div>

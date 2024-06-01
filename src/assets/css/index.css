@@ -23,10 +23,10 @@
   src: url(../fonts/VisbyRoundCF-Heavy.otf);
 }
 :root {
-  --font-main: visbyr-medium;
-  --font-demibold: visbyr-demibold;
   --font-bold: visbyr-bold;
+  --font-demibold: visbyr-demibold;
   --font-light: visbyr-light;
+  --font-main: visbyr-medium;
   --font-size-2xs: 0.75rem;
   --font-size-xs: 1rem;
   --font-size-s: 1.125rem;
@@ -83,7 +83,7 @@
   --color-primary-bright-3: #c5e5e2;
   --color-primary-bright-4: #e6f3f2;
   --color-secondary: #4b3e91;
-  --color-text-gray-darker: #3b3838;
+  --color-text-black: #000000;
   --color-text-gray: #535353;
   --color-background-1: #f8f8f8;
   --shadow-primary: rgba(0, 0, 0, 0.08) 1px 2.45px 3px;
@@ -201,13 +201,13 @@ html {
 }
 .header .sectionsContainer a,
 .header .dropdownSectionsContainer a {
-  color: var(--color-primary-dark-1);
+  color: var(--color-primary-dark-2);
   cursor: pointer;
 }
 .header .sectionsContainer a::after,
 .header .dropdownSectionsContainer a::after {
   display: block;
-  border-bottom: solid 1px var(--color-primary-dark-1);
+  border-bottom: solid 1px var(--color-primary-dark-2);
   content: "";
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
@@ -220,8 +220,8 @@ html {
   display: none;
   width: 33px;
   height: 33px;
-  color: var(--color-primary-dark-1);
-  stroke: var(--color-primary-dark-1);
+  color: var(--color-primary-dark-2);
+  stroke: var(--color-primary-dark-2);
   stroke-width: 0.3px;
 }
 .header .headerDropdown {
@@ -510,7 +510,7 @@ html {
   padding-bottom: var(--spacing-9xl);
 }
 .portfolioSection .sectionBodyContainer .portfolioLinkContainer .portfolioText a {
-  color: var(--color-primary-dark-1);
+  color: var(--color-primary-dark-2);
   text-underline-offset: 10%;
 }
 .portfolioSection .sectionBodyContainer .carrouselContainer .carrouselItemContainer {
@@ -588,7 +588,7 @@ html {
   flex-direction: row;
 }
 .aboutMeSection .sectionBodyContainer a {
-  color: var(--color-primary-dark-1);
+  color: var(--color-primary-dark-2);
   text-underline-offset: 10%;
 }
 .aboutMeSection .sectionBodyContainer .linkSectionContainer {
@@ -774,7 +774,7 @@ html {
   margin: 0 var(--spacing-4xs) 0 0;
 }
 .contactSection .sectionBodyContainer .sectionBodyColumnsContainer .formContainer .form .checkBoxContainer span {
-  color: var(--color-primary-dark-1);
+  color: var(--color-primary-dark-2);
   text-decoration: none;
   font-family: var(--font-bold);
 }
@@ -789,14 +789,14 @@ html {
   min-width: 8rem;
   box-shadow: var(--shadow-primary);
   border: none;
-  color: var(--color-primary-dark-1);
+  color: var(--color-primary-dark-2);
   font-size: var(--font-size-m);
   transition: 0.3s ease;
   outline: none;
   border-radius: var(--border-radius-m);
   padding: 2% 1%;
   background-color: transparent;
-  border: 3px solid var(--color-primary-dark-1);
+  border: 3px solid var(--color-primary-dark-2);
   margin-top: var(--spacing-2xs);
 }
 .contactSection .sectionBodyContainer .sectionBodyColumnsContainer .formContainer .form .sendButton:hover:not([disabled]) {
@@ -947,7 +947,7 @@ html {
   font-size: var(--font-size-s);
   padding: var(--spacing-s) var(--spacing-10xl);
   background-color: var(--color-primary-dark-3);
-  color: var(--color-text-gray-darker);
+  color: var(--color-text-black);
 }
 .footer .bottomSection .contactInfoContainer {
   display: flex;
@@ -970,7 +970,7 @@ html {
   font-size: var(--font-size-2xs);
 }
 .footer .bottomSection .footnotesContainer a {
-  color: var(--color-text-gray-darker);
+  color: var(--color-text-black);
   text-decoration: none;
   text-underline-offset: 4px;
 }
@@ -988,7 +988,7 @@ html {
 }
 .footer .bottomSection .footnotesContainer .legalSection span {
   cursor: pointer;
-  color: var(--color-text-gray-darker);
+  color: var(--color-text-black);
   text-decoration: none;
   text-underline-offset: 4px;
 }

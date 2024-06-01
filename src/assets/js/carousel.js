@@ -52,7 +52,7 @@ const initializeCarousel = async () => {
   };
 
   imageUrls.forEach((url, index) => {
-    carousel.append(`<div><img data-lazy="${url}" alt="carousel image ${index}"></div>`);
+    carousel.append(`<div><img data-lazy="${url}" alt="portfolio ${index + 1}"></div>`);
   });
 
   carousel.on('init', function (event, slick) {
