@@ -57,24 +57,27 @@
       crossorigin
     />
 
-    <!-- Sitewide Stylesheets and Scripts -->
+    <link rel="stylesheet" href="/assets/css/index.css" />
     <link
+      defer
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
     <link
+      defer
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
     />
-    <link rel="stylesheet" href="/assets/css/index.css" />
-    <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-config-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-storage-compat.js"></script>
-    <script>
-      const firebaseConfig = {{ env.FIREBASE_CONFIG | safe }};
-      firebase.initializeApp(firebaseConfig);
+    <script defer src="https://www.gstatic.com/firebasejs/10.12.1/firebase-app-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/10.12.1/firebase-config-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/10.12.1/firebase-storage-compat.js"></script>
+    <script defer>
+      document.addEventListener('DOMContentLoaded', function () {
+        const firebaseConfig = {{ env.FIREBASE_CONFIG | safe }};
+        firebase.initializeApp(firebaseConfig);
+      });
     </script>
     <script defer src="/assets/js/index.js"></script>
     {% block head %}{% endblock %}
@@ -92,8 +95,8 @@
       "sections/contact.html" %}
     </main>
     {% include "components/footer.html" %} {% include "components/go-top-button.html" %}
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script defer src="/assets/js/carousel.js"></script>
   </body>
 </html>
