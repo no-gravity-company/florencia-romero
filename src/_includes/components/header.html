@@ -26,10 +26,10 @@
         <li>
           <a
             class="dropdown-section"
-            href="{{section.url}}"
+            href="#{{section.url}}"
             aria-label="Scroll to {{section.label}} section"
           >
-            {{section.label | uppercase}}
+            {{ ('sections.titles.' + section.id) | i18n | uppercase}}
           </a>
         </li>
         {% endfor %}
