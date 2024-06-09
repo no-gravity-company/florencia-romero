@@ -1,3 +1,3 @@
 module.exports = {
-  id: env.IS_PROD ? 'G-8KXQWGKE6Z' :  ''
+  id: process.env.IS_PROD ? 'G-8KXQWGKE6Z' :  ''
 }
