@@ -191,6 +191,7 @@ html {
 }
 .header .logo {
   width: 56px;
+  margin-right: 44px;
   fill: var(--color-primary-dark-1);
   cursor: pointer;
 }
