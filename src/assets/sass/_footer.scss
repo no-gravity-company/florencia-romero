@@ -21,8 +21,10 @@
 
       .iconsContainer {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap: var(--spacing-l);
+        width: 100%;
+        max-width: 350px;
 
         svg {
           box-shadow: var(--shadow-primary);
@@ -115,6 +117,10 @@
       gap: var(--spacing-l);
       padding-top: var(--spacing-11xl);
       background-image: url(../../assets/backgrounds/waves-header.svg);
+
+      .linksContainer {
+        width: 90%;
+      }
 
       .logoContainer {
         .logo {

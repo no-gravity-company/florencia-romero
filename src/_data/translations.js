@@ -9,8 +9,8 @@ module.exports = {
       es: 'Experta en audiodescripción, accesibilidad y traducción audiovisual de inglés a español',
     },
     keywords: {
-      en: 'Audio Description, Audiodescriber, Audiodescriptor, Audio describer, Audio descriptor, Video Description, Acessibility specialist, Audio Description Expert, Accessibility, Accessibility Expert, Translation, Spanish Audio Description, English to Spanish translation, English to Spanish audiovisual translation',
-      es: 'Audiodescripción, Audio descripción, Audiodescriptor, Audiodescriptora, Especialista en accesibilidad, Experta en Audiodescripción, Accesibilidad, Experta en Accesibilidad, Traducción, Audiodescripción en español, Traducción de inglés a español, Traducción audiovisual de inglés a español',
+      en: 'Audio Description, Audiodescriber, Audiodescriptor, Audio describer, Audio descriptor, Video Description, Acessibility specialist, Audio Description Expert, Accessibility, Accessibility Expert, Translation, Spanish Audio Description, English to Spanish translation, English to Spanish audiovisual translation, audiovisual translation',
+      es: 'Audiodescripción, Audio descripción, Audiodescriptor, Audiodescriptora, Especialista en accesibilidad, Experta en Audiodescripción, Accesibilidad, Experta en Accesibilidad, Traducción, Audiodescripción en español, Traducción de inglés a español, Traducción audiovisual de inglés a español, traducción audiovisual',
     },
     address: {
       country: { en: 'Spain', es: 'España' },
@@ -29,8 +29,8 @@ module.exports = {
   sections: {
     titles: {
       main: {
-        en: 'Audiovisual translator\nand accessibility specialist',
-        es: 'Traductora audiovisual\ny especialista en accesibilidad',
+        en: 'Audios Description\nand Audiovisual Translation',
+        es: 'Audiodescripción\ny traducción audiovisual',
       },
       services: { en: 'Services', es: 'Servicios' },
       portfolio: { en: 'Portfolio', es: 'Trabajos' },
@@ -48,7 +48,7 @@ module.exports = {
       blinkWords8: { en: 'efficiency', es: 'eficiencia' },
       blinkWords9: { en: 'trust', es: 'confianza' },
     },
-    services: {
+      services: {
       audiovisual: {
         title: {
           en: 'Audiovisual translation',
@@ -65,7 +65,7 @@ module.exports = {
           es: 'Accesibilidad (AD, SPS)',
         },
         body: {
-          en: 'Audio description for visually impaired people, and subtitles for the deaf and hard of hearing for movies, realities, documentaries...',
+          en: 'Audio description for visually impaired people, and subtitles for the deaf and hard of hearing for movies, TV series, realities, documentaries...',
           es: 'Creación de guiones de audiodescripción para personas ciegas o con discapacidad visual y subtitulado para personas sordas o con discapacidad auditiva de películas, series, realities, documentales, programas...',
         },
       },
@@ -86,7 +86,7 @@ module.exports = {
         },
         body: {
           en: 'Translation and adaptation of websites, mobile apps, and software using Computer Assisted Tools (CAT).',
-          es: 'Traducción y adaptación de páginas web, aplicaciones para móviles y software con herramientas especialiazadas de traducción asistida (TAO).',
+          es: 'Traducción y adaptación de páginas web, aplicaciones para móviles y software con herramientas especializadas de traducción asistida (TAO).',
         },
       },
       revision: {
@@ -102,8 +102,8 @@ module.exports = {
       text: {
         title: { en: 'General Translation', es: 'Traducción de textos' },
         body: {
-          en: 'Translation of general texts, novels, articles, blogs, tourist guides, comics, theatre plays...',
-          es: 'Traducción de textos generales, editoriales, literarios, periodísticos, blogs, guías turísticas, cómics, obras de teatro...',
+          en: 'Translation of general texts, novels, literary works, journalistic articles, blogs, travel guides, comics...',
+          es: 'Traducción de textos generales, editoriales, literarios, periodísticos, blogs, guías turísticas, cómics...',
         },
       },
     },
@@ -115,14 +115,10 @@ module.exports = {
       textLink: { en: 'ATRAE registry', es: 'listado de obras registradas de ATRAE' },
       text2: {
         en: ' to find some of the movies, TV series, documentaries, video games, and other audiovisual projects that I have worked on.',
-        es: ' para ver algunas de las películas, series, documentales, videojuegos y otras obras audiovisuales en las que he trabajado.',
+        es: ' donde encontrarás algunas de las películas, series, documentales, videojuegos y otros proyectos audiovisuales en los que he trabajado.',
       },
     },
     aboutMe: {
-      translatorLanguages: {
-        en: 'English and French into Spansih Translator',
-        es: 'Traductora de inglés y francés a español',
-      },
       text: {
         part1: {
           en: 'My name is Florencia, and I am officially an English and French into Spanish translator',
@@ -179,8 +175,8 @@ module.exports = {
     },
     contact: {
       text: {
-        en: 'Do you need a translation? Would you like to make your audiovisual content accessible? Do you have a project in mind?',
-        es: '¿Necesitas una traducción? ¿Te gustaría hacer que tu contenido audiovisual fuera accesible? ¿Tienes algún proyecto en mente?',
+        en: 'Would you like to make your audiovisual content accessible? Do you need a translation? Do you have an audiovisual project in mind?',
+        es: '¿Te gustaría hacer que tu contenido audiovisual fuera accesible? ¿Necesitas una traducción? ¿Tienes algún proyecto audiovisual en mente?',
       },
       letsTalk: { en: 'Count on me!', es: '¡Cuenta conmigo!' },
       form: {

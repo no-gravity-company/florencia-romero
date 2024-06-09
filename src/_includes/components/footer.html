@@ -4,49 +4,60 @@
       <span>{{ 'footer.letsTalk' | i18n }}</span>
       <div class="iconsContainer">
         <a href="{{urls.gmail}}" target="_blank" rel="noopener noreferrer">
-          <img src="/assets/icons/gmail-green.png" class="icon gmailIcon" alt="gmail" />
+          <img src="/assets/icons/gmail-green.png" class="icon gmailIcon" alt="gmail"/>
         </a>
         <a href="{{urls.linkedin}}" target="_blank" rel="noopener noreferrer">
-          <img src="/assets/icons/linkedin-green.png" class="icon" alt="linkedin" />
+          <img src="/assets/icons/linkedin-green.png" class="icon" alt="linkedin"/>
+        </a>
+        <a href="{{urls.instagram}}" target="_blank" rel="noopener noreferrer">
+          <img src="/assets/icons/instagram-green.png" class="icon" alt="instagram"/>
         </a>
         <a href="{{urls.twitter}}" target="_blank" rel="noopener noreferrer">
-          <img src="/assets/icons/twitter-green.png" class="icon" alt="twitter" />
+          <img src="/assets/icons/twitter-green.png" class="icon" alt="twitter"/>
         </a>
         <a href="{{urls.proz}}" target="_blank" rel="noopener noreferrer">
-          <img src="/assets/icons/proz-green.png" class="icon" alt="proz" />
+          <img src="/assets/icons/proz-green.png" class="icon" alt="proz"/>
         </a>
         <a href="{{urls.skype}}" target="_blank" rel="noopener noreferrer">
-          <img src="/assets/icons/skype-green.png" class="icon" alt="skype" />
+          <img src="/assets/icons/skype-green.png" class="icon" alt="skype"/>
         </a>
       </div>
     </div>
     <div class="logoContainer">
-      <svg class="logo">{% renderFile './src/assets/icons/logo.svg', null, 'html' %}</svg>
+      <svg class="logo">{% renderFile './src/assets/icons/logo.svg',
+        null,
+        'html' %}</svg>
     </div>
   </div>
   <div class="bottomSection">
     <div class="contactInfoContainer">
       <a href="{{urls.gmail}}" target="_blank" rel="noopener noreferrer" class="contactInfo">
-        <img src="/assets/icons/mail-dark.png" class="icon" alt="email" />
+        <img src="/assets/icons/mail-dark.png" class="icon" alt="email"/>
         <span>{{client.email}}</span>
       </a>
       <a class="contactInfo" href="{{urls.phone}}">
-        <img src="/assets/icons/phone-dark.png" class="icon" alt="{{'footer.telephone' | i18n}}" />
+        <img src="/assets/icons/phone-dark.png" class="icon" alt="{{'footer.telephone' | i18n}}"/>
         <span>{{client.phoneNumber}}</span>
       </a>
     </div>
     <div class="footnotesContainer">
       <span>
         {{ 'footer.webDesign' | i18n }}
-        <a target="_blank" href="{{ footer.webDesignerUrl }}"> {{ footer.webDesigner }} </a>
+        <a target="_blank" href="{{ footer.webDesignerUrl }}">
+          {{ footer.webDesigner }}
+        </a>
       </span>
       <span>
         {{ 'footer.logoDesign' | i18n }}
-        <a target="_blank" href="{{ footer.logoDesignerUrl }}"> {{ footer.logoDesigner }} </a>
+        <a target="_blank" href="{{ footer.logoDesignerUrl }}">
+          {{ footer.logoDesigner }}
+        </a>
       </span>
       <span>
         {{ 'footer.photoDesign' | i18n }}
-        <a target="_blank" href="{{ footer.photographerUrl }}"> {{ footer.photographer }} </a>
+        <a target="_blank" href="{{ footer.photographerUrl }}">
+          {{ footer.photographer }}
+        </a>
       </span>
       <span>{{ footer.copyright }}</span>
       <div class="legalSection">

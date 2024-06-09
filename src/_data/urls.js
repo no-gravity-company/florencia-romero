@@ -5,6 +5,7 @@ module.exports = {
   atraeXiAwards: 'https://premios.atrae.org/finalistas-xi-edicion',
 
   linkedIn: 'https://www.linkedin.com/in/fctrad',
+  instagram: 'https://www.instagram.com/fctrad',
   twitter: 'https://twitter.com/fctrad',
   proz: 'https://www.proz.com/translator/1841231',
   skype: 'https://join.skype.com/invite/F3MdYMh1enbJ',

@@ -897,8 +897,10 @@ html {
 }
 .footer .topSection .linksContainer .iconsContainer {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: var(--spacing-l);
+  width: 100%;
+  max-width: 350px;
 }
 .footer .topSection .linksContainer .iconsContainer svg {
   box-shadow: var(--shadow-primary);
@@ -1008,6 +1010,9 @@ html {
     gap: var(--spacing-l);
     padding-top: var(--spacing-11xl);
     background-image: url(../../assets/backgrounds/waves-header.svg);
+  }
+  .footer .topSection .linksContainer {
+    width: 90%;
   }
   .footer .topSection .logoContainer .logo {
     height: unset;
