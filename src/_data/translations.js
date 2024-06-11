@@ -29,7 +29,7 @@ module.exports = {
   sections: {
     titles: {
       main: {
-        en: 'Audios Description\nand Audiovisual Translation',
+        en: 'Audio Description\nand Audiovisual Translation',
         es: 'Audiodescripción\ny traducción audiovisual',
       },
       services: { en: 'Services', es: 'Servicios' },
@@ -48,7 +48,7 @@ module.exports = {
       blinkWords8: { en: 'efficiency', es: 'eficiencia' },
       blinkWords9: { en: 'trust', es: 'confianza' },
     },
-      services: {
+    services: {
       audiovisual: {
         title: {
           en: 'Audiovisual translation',
