@@ -5,7 +5,4 @@ module.exports = {
   email: 'fctraduce@gmail.com',
   name: 'Florencia Romero',
   translatorLanguages: 'EN > ES',
-  address: {
-    city: 'Málaga',
-  },
 };

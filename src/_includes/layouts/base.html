@@ -5,7 +5,9 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id={{analytics.id}}"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       gtag('js', new Date());
 
       gtag('config', '{{analytics.id}}');
@@ -81,8 +83,14 @@
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
     />
     <script defer src="https://www.gstatic.com/firebasejs/10.12.1/firebase-app-compat.js"></script>
-    <script defer src="https://www.gstatic.com/firebasejs/10.12.1/firebase-config-compat.js"></script>
-    <script defer src="https://www.gstatic.com/firebasejs/10.12.1/firebase-storage-compat.js"></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/10.12.1/firebase-config-compat.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/10.12.1/firebase-storage-compat.js"
+    ></script>
     <script defer>
       document.addEventListener('DOMContentLoaded', function () {
         const firebaseConfig = {{ env.FIREBASE_CONFIG | safe }};
@@ -93,8 +101,7 @@
     {% block head %}{% endblock %}
 
     <title>
-      {{ 'meta.title' | i18n }} | {{ client.name }} | {{ client.address.city }}, {{
-      'meta.address.country' | i18n }}
+      {{ 'meta.title' | i18n }} | {{ client.name }}, {{ 'meta.address.country' | i18n }}
     </title>
   </head>
   <body>
@@ -106,7 +113,10 @@
     </main>
     {% include "components/footer.html" %} {% include "components/go-top-button.html" %}
     <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    ></script>
     <script defer src="/assets/js/carousel.js"></script>
   </body>
 </html>
